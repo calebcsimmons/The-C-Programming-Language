@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/calebsimmons/software-development/omscs/Textbooks/The C Programming Language",
+      "program": "/Users/calebsimmons/software-development/omscs/Textbooks/The C Programming Language/build/Debug/outDebug"
+    }
+  ]
+}
