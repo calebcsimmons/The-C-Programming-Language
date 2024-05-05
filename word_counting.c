@@ -1,4 +1,4 @@
-// Word counting program
+// Word counting and Listing program
 
 #include <stdio.h>
 
@@ -14,10 +14,19 @@ int main() {
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
             state = OUTSIDE;
-        } else if (state == OUTSIDE) {
+            putchar('\n');
+        } 
+        
+        else if (state == OUTSIDE) {
             state = INSIDE;
+            putchar(c);
             ++nwords;
         }
+            
+        else if (state == INSIDE) {
+            putchar(c);
+        }
+        
     }
 
     printf("There are %d words\n", nwords);
