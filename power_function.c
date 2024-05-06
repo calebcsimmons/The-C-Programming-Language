@@ -1,4 +1,5 @@
 // Function to raise n number to the x power (n^x)
+// Not practical as it only handles positive integers
 
 #include <stdio.h>
 
