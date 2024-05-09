@@ -1,16 +1,14 @@
 /* Hello World */
 
-#include <stdio.h>
+#include <stdio.h> // standard library
 
 int main () {
 	printf("Hello World\n");
 }
 
-#include <stdio.h>
-
 int main() {
     int c;
-    while (c != EOF) {
+    while (c != EOF) { // EOF is end of file character (cntrl + D)
         putchar(c);
         c = getchar();
     if (c == EOF)
