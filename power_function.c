@@ -7,11 +7,25 @@
 // Common practice is to declare and define it in the beginning.
 
 // Function Declaration and Definition
-int power (int n, int x) {
+int powerv1 (int base, int x) {
     int result = 1;
 
     for (int i = 0; i < x; ++i) {
-        result = result * n;
+        result = result * base;
+        }
+    return result;
+
+}
+
+// Since we are in C, we could have used 'x' instead of creating i
+// in the for loop, --x instead of ++i
+// This leads to having to use/create less variables.
+
+int powerv2 (int base, int x) {
+    int result = 1;
+
+    for (result = 1; x > 0; --x) {
+        result = result * base;
         }
     return result;
 
@@ -22,7 +36,7 @@ int main () {
     int num2 = 3;
 
     // Call the function
-    int result = power(num1, num2);
+    int result = powerv2(num1, num2);
     printf("%d to the power of %d = %d\n", num1, num2, result);
 
 }

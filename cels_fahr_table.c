@@ -1,21 +1,36 @@
 #include <stdio.h>
 
 /* Print a F to C table in increments of 20 deg F */
+// Function for a F to C table 
+
+void tempConversion(int temp, char unit) {
+	int result = 1;
+
+	if (unit == 'F' || unit == 'f') {
+		result = (5.0/9.0) * (temp - 32.0);
+		printf("%d fahr is %d cels\n",temp,result);
+	}
+
+	else if (unit == 'C' || unit == 'c') {
+		result = (temp / (5.0/9.0)) + 32.0;
+		printf("%d cels is %d fahr\n",temp,result);
+
+	}
+	
+	else {
+		printf("Not recognized unit");
+	}
+
+	}
+
+
 
 int main() {
-	float cels, fahr;
-	int start = 0;
-	int end = 200;
-	int increment = 20;
+	int temp = 0;
+	char unit = 'C';
 
-	/*Print Heading*/
-	printf("FAHRENHEIT TO CELSIUS TABLE\n");
+	tempConversion(temp, unit);
 
-	fahr = start;
-	while (fahr <= end) {
-		cels = ((5.0/9.0) * (fahr - 32.0));
-		printf("%3.0f\t%6.1f\n", fahr, cels);
-		fahr = fahr + increment;
-	}
+	return 0;
 
 }
